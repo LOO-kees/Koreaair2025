@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+main{
+  background-color: #fff;
+}
+
+main h2{
+  display: none;
+}
+
+
+/* 메인 컨테이너 */
+.login-container {
+  width: 80%;
+  margin: 0px auto;
+  background: #fff;
+  /* border-radius: 6px; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.2); */
+  padding: 60px 0px 60px;
+  line-height: 28px;
+}
+
+/* 탭 메뉴 */
+.tab-menu {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* 탭 버튼 */
+.tab-btn {
+  flex: 1;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #777;
+  cursor: pointer;
+}
+
+/* 탭 버튼 활성화 시: 파란색 */
+.tab-btn.active {
+  color: #161616;
+  border-bottom: 3px solid #00256C;
+}
+
+/* 탭 컨텐츠 (기본 숨김) */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* input 그룹 */
+.input-group {
+  margin-bottom: 20px;
+  position: relative; /* 붉은색 동그라미 배치를 위해 사용 */
+}
+
+/* 라벨: 붉은색 동그라미 추가 */
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+  /* 여백 조정은 필요에 따라 */
+}
+
+/* 라벨 옆 위 붉은색 동그라미 */
+.input-group label::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;      /* 라벨 글자 대비 위쪽 위치 조정 */
+  right: -12px;   /* 라벨 글자 우측 위치 조정 */
+}
+
+/* 밑줄만 있는 인풋 */
+.input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #00256C; /* 파란색 밑줄 */
+  outline: none;
+  font-size: 14px;
+  padding: 8px 0; /* 위아래 여백만 */
+  /* placeholder 색상도 필요하면 커스텀 */
+}
+
+/* 체크박스 + 회원가입 */
+.option-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrap input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.signup-link {
+  font-size: 14px;
+  color: #3670AF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.signup-link i {
+  margin-left: 4px; /* 아이콘 왼쪽 간격 */
+}
+
+/* 로그인 버튼 */
+.login-btn {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #00256C; /* 원하는 파란색 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* 아이디/비밀번호 찾기 */
+.find-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.find-info .link {
+  font-size: 14px;
+  color: #111111;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.find-info .divider {
+  color: #ccc;
+}
+
+/* SNS 로그인 */
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-login p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* 기존 .social-login, .social-icons 스타일은 그대로 두고 추가/수정 */
+
+.social-icons {
+  /* inline-block으로 늘어놓거나 flex를 사용해도 됨 */
+  display: flex; 
+  justify-content: center; /* 가운데 정렬 */
+  gap: 38px; /* 아이콘 간 간격 */
+}
+
+.social-link {
+  /* 아이콘+텍스트를 세로로 배치하기 위해 flex 사용 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* 밑줄 제거 */
+  color: #333; /* 글자색(원하는 색으로 변경) */
+  font-size: 1em; /* 텍스트 크기 조정 */
+}
+
+.social-link img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 5px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+
+/* 로그인 도움 링크 */
+.help-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.help-link a {
+  font-size: 14px;
+  color: #111111;
+  text-decoration: underline;
+}

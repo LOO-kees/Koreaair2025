@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* 공통서식 
+  글꼴, 글자색, 글자크기, 링크서식, 버튼, 배경색
+*/
+
+body{
+  font-family: "Nanum Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color:#333333;
+  font-size:0.75em; /* 모바일은 각 기기마다 해상도 맞춰야 하므로 상대단위를 쓴다. %, em, rem */
+  background: rgb(55,169,193);
+  background: linear-gradient(180deg, rgba(55,169,193,1) 33%, rgba(230,230,230,1) 33%); 
+}
+
+  
+
+
+a{
+  color:#333333; text-decoration: none;}
+
+  /* 헤더서식 */
+  header{height: 68px;position:relative;}
+  header > h1{text-align:center} /* 로고 중앙에 오게 함 */
+  header > h1 img{
+    height:28px; /*width 값을 줄여도 되고 height값을 줄여도 된다.*/
+    padding-top:20px; /* 68(전체 헤더 크기)-20(txt_logo.png 크기) = 40. 헤더 중간에 배치하기 위해서 40÷2 = 20 */
+  }  
+  
+  #t_btn, #login_btn{
+    position:absolute;top:10px;
+    cursor:pointer;  /* 마우스오버시 손가락 모양 나오게 하는건데 모바일은 터치이므로 굳이 필요 없다. */
+  }
+
+  #t_btn{left:10px;}  /* t_btn, login_btn은 좌, 우가 다르기 때문에 따로 배치해줬다. */
+  #login_btn{right:10px;}
+
+
+  /* 내비게이션 서식 시작 */
+
+  /* 메인메뉴를 클릭시 .sub에 적용되는 서식 */
+  .act{display: block !important;}
+
+  /* 서브가 보일 때 아이콘의 방향을 반대로 회전 */
+  .rotate{
+    transform: rotate(180deg) 
+    translate(-15px, -6px)
+    !important;}
+
+   /* 내비게이션 서식 */
+  #navi{
+    width:100%;height:100%;
+    position:fixed;
+    top:0px;left:-100%; /* 보이게 하는 값 : 0px */
+    background-color:rgba(0,0,0,.8);
+    z-index:1000;
+    transition: 0.5s;
+  }
+  .gnb{
+    width:70%;height:100%;
+    background-color:#ffffff;
+    padding-top: 70px;  /*<i class="fas fa-times"></i> 닫기버튼과 겹치지 않는게 좋으므로 내려줬다. 닫기버튼과 겹치면 사용자가 메뉴를 터치하다가 닫힐 수도 있기 때문*/
+    box-sizing: border-box; /* 패딩, 마진을 영역에 포함하여 계산. 박스가 커지지않게 하는 속성. padding-top: 70px을 줘서 높이가 내려갔기 때문에 100%가 넘어가므로 넘치지 않게 하기 위해 박스 사이징을 준 것.*/
+  }
+  .gnb li{
+    line-height: 50px;
+    border-bottom:1px solid #cccccc;
+    text-indent: 14px;
+  }
+  .gnb a{display: block;}
+  .gnb > li > a{font-size: 1.05rem;}
+  .sub a{font-size:0.9rem;}
+  .gnb .fa-angle-down{
+    float:right;
+    font-size:1.4rem;
+    padding:10px; /* 패딩값을 준 이유가 아이콘은 작아도 터치시 영역을 넓혀주게 하기 위해서이다.
+     */
+    transform:translateY(5px);
+    }
+    .sub{background-color: #f0efef;display:none;}
+    .sub li{line-height:40px;}
+
+  .fa-times{ /* 닫기 버튼 서식 */
+    position:absolute;right:5%;top:5%;
+    color:#fff;font-size:36px;
+  }
+
+/* 푸터서식 */
+
+footer{
+  background-color: #c2c2c2;
+  padding: 20px 0px 0px 10px;
+}
+footer nav{}
+footer ul{
+  display: flex;  /* display: flex 는 1차원 속성. 가로배치 */
+  justify-content: space-around;
+  width:70%; /* 전체 화면크기가 100%이므로 70%만 하면 줄어든다. 당연히 왼쪽15%, 오른쪽15%의 여백이 남는다. */
+  margin:0 auto; /* 가운데배치 해주기 위해 쓴 것 */
+} 
+
+footer ul li{text-align:center;}
+footer ul li a{
+  font-size:0.85rem;
+  line-height:30px;
+}
+footer ul li:first-child a{
+  font-weight: bold;
+}
+footer ul li a::after{
+  position:relative;
+  left:19px;
+  content:"";
+  border-right:1px solid #ffffff;
+}
+
+footer ul li:last-child a::after{
+  display:none;
+}
+
+footer p, footer address{
+  line-height: 28px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+  /*
+  
+    footer ul{
+    display: flex;  /* display: flex 는 1차원 속성. 가로배치 
+    width:70%;  전체 화면크기가 100%이므로 70%만 하면 줄어든다. 당연히 왼쪽15%, 오른쪽15%의 여백이 남는다. 
+    margin:0 auto;  가운데배치 해주기 위해 쓴 것 
+  } 
+  
+  */
