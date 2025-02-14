@@ -14,7 +14,7 @@ body{
   background: linear-gradient(180deg, rgba(55,169,193,1) 33%, rgba(230,230,230,1) 33%); 
 }
 
-  
+.d_none{display:none;} 
 
 
 a{
